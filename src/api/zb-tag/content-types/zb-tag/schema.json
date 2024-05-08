@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zb_tags",
+  "info": {
+    "singularName": "zb-tag",
+    "pluralName": "zb-tags",
+    "displayName": "zb_tag"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "zb_posts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::zb-post.zb-post",
+      "mappedBy": "zb_tags"
+    }
+  }
+}

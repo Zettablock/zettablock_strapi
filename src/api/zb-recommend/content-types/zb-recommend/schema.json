@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zb_recommends",
+  "info": {
+    "singularName": "zb-recommend",
+    "pluralName": "zb-recommends",
+    "displayName": "zb_ recommend",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "info": {
+      "type": "text",
+      "required": true
+    },
+    "zb_post": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::zb-post.zb-post"
+    }
+  }
+}

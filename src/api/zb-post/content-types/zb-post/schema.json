@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zb_posts",
+  "info": {
+    "singularName": "zb-post",
+    "pluralName": "zb-posts",
+    "displayName": "zb_post",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "zb_author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::zb-author.zb-author"
+    },
+    "zb_tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::zb-tag.zb-tag",
+      "inversedBy": "zb_posts"
+    },
+    "intro": {
+      "type": "text"
+    },
+    "customizeId": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "count": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

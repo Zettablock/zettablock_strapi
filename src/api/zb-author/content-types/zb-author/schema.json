@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zb_authors",
+  "info": {
+    "singularName": "zb-author",
+    "pluralName": "zb-authors",
+    "displayName": "zb_author",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}
